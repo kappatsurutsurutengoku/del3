@@ -1,0 +1,13 @@
+.corner-logo {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 60px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  z-index: 200;
+}
+
+.corner-logo:hover {
+  transform: scale(1.1); /* optional hover effect */
+}

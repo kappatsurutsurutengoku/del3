@@ -1,0 +1,163 @@
+/* Container */
+.login-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Logo */
+.screen-logo {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 70px;
+  height: auto;
+  z-index: 2;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.screen-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Login Box */
+.login-box {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  width: 400px;
+  max-width: 90%;
+  z-index: 1;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Header */
+.login-box h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #034f84;
+  font-weight: 700;
+}
+
+.login-desc {
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Tabs */
+.login-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.login-tabs button {
+  flex: 1;
+  padding: 12px 0;
+  border: none;
+  background: #f0f0f0;
+  color: #555;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-tabs button.active {
+  background: #00aaff;
+  color: #fff;
+}
+
+/* Form */
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-box input {
+  padding: 14px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.login-box input:focus {
+  outline: none;
+  border-color: #00aaff;
+}
+
+/* Submit button */
+.login-box button[type="submit"] {
+  padding: 14px;
+  background: #00aaff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.login-box button[type="submit"]:hover {
+  background: #0088cc;
+  transform: translateY(-2px);
+}
+
+/* Back home button */
+.back-home {
+  margin-top: 18px;
+  background: none;
+  border: none;
+  color: #0072ff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.back-home:hover {
+  color: #004c99;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .login-box {
+    padding: 40px 25px;
+  }
+
+  .login-box h2 {
+    font-size: 1.7rem;
+  }
+
+  .login-tabs button {
+    padding: 10px 0;
+  }
+}
