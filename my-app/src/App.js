@@ -104,7 +104,7 @@ function App() {
               <div className="hero-subtext">
                 <p>We couldn’t do our ocean</p>
                 <p>work without you.</p>
-                <a href="#" className="blue-btn">More</a>
+                <a href="#" className="blue-btn">Donate</a>
               </div>
             </section>
 
