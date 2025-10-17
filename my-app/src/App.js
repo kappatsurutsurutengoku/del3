@@ -104,7 +104,18 @@ function App() {
               <div className="hero-subtext">
                 <p>We couldn’t do our ocean</p>
                 <p>work without you.</p>
-                <a href="#" className="blue-btn">Donate</a>
+                <a
+                  href="#"
+                  className="blue-btn"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setShowLogin(true);
+                    setShowOmOss(false);
+                    setShowCalendar(false);
+                  }}
+                >
+                  Donate
+                </a>
               </div>
             </section>
 
