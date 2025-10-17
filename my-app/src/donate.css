@@ -1,0 +1,148 @@
+.donate-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #00aaff, #0077cc);
+}
+
+.screen-logo {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 70px;
+  height: auto;
+  z-index: 2;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  filter: brightness(0) invert(1);
+}
+.screen-logo:hover {
+  transform: scale(1.1);
+}
+
+.donate-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  width: 400px;
+  max-width: 90%;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Header */
+.donate-box h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #034f84;
+  font-weight: 700;
+}
+
+.donate-desc {
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.amount-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.amount-btn {
+  flex: 1 1 30%;
+  min-width: 80px;
+  padding: 12px 0;
+  border: none;
+  border-radius: 10px;
+  background: #f0f0f0;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.amount-btn.active {
+  background: #00aaff;
+  color: #fff;
+  transform: scale(1.05);
+}
+.amount-btn:hover {
+  background: #0099dd;
+  color: #fff;
+}
+
+.custom-amount input {
+  padding: 12px 15px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  text-align: center;
+  transition: border 0.3s ease;
+}
+.custom-amount input:focus {
+  outline: none;
+  border-color: #00aaff;
+}
+
+.donate-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  background: #00aaff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.donate-btn:hover {
+  background: #0088cc;
+  transform: translateY(-2px);
+}
+
+
+.back-home {
+  margin-top: 18px;
+  background: none;
+  border: none;
+  color: #0072ff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+.back-home:hover {
+  color: #004c99;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 500px) {
+  .donate-box {
+    padding: 40px 25px;
+  }
+  .donate-box h2 {
+    font-size: 1.7rem;
+  }
+}

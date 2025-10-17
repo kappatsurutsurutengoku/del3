@@ -5,6 +5,7 @@ import "./App.css";
 import Calendar from "./pages/calendar.js";
 import OmOss from "./pages/om_oss.js";
 import Login from "./pages/login.js";
+import Donate from "./pages/donate.js";
 import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
 
@@ -52,11 +53,13 @@ function App() {
   const [showCalendar, setShowCalendar] = useState(false);
   const [showOmOss, setShowOmOss] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
+  const [showDonate, setShowDonate] = useState(false);
 
   const goHome = () => {
     setShowCalendar(false);
     setShowOmOss(false);
     setShowLogin(false);
+    setShowDonate(false);
   };
 
   return (
@@ -66,16 +69,19 @@ function App() {
           setShowOmOss(true);
           setShowCalendar(false);
           setShowLogin(false);
+          setShowDonate(false);
         }}
         onShowCalendar={() => {
           setShowCalendar(true);
           setShowOmOss(false);
           setShowLogin(false);
+          setShowDonate(false);
         }}
         onShowLogin={() => {
           setShowLogin(true);
           setShowOmOss(false);
           setShowCalendar(false);
+          setShowDonate(false);
         }}
       />
 
@@ -86,6 +92,8 @@ function App() {
           <OmOss goHome={goHome} />
         ) : showLogin ? (
           <Login goHome={goHome} />
+        ) : showDonate ? (
+          <Donate goHome={goHome} />
         ) : (
           <>
             <section className="hero">
@@ -109,9 +117,10 @@ function App() {
                   className="blue-btn"
                   onClick={(e) => {
                     e.preventDefault();
-                    setShowLogin(true);
+                    setShowDonate(true);
                     setShowOmOss(false);
                     setShowCalendar(false);
+                    setShowLogin(false);
                   }}
                 >
                   Donate
